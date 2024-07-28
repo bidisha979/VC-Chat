@@ -20,9 +20,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 const socketio = require('socket.io');
-const io = require("socket.io")(server, {
+const io = socketio(server, {
     cors: {
-        origin: '*'
+        origin: '*',
+        methods: ['GET', 'POST']
     }
 });
 
