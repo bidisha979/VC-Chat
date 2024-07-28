@@ -22,7 +22,8 @@ app.use(express.static('public'));
 const socketio = require('socket.io');
 const io = require("socket.io")(server, {
     cors: {
-        origin: '*'
+        origin: '*',
+        methods: ['GET', 'POST']
     }
 });
 
@@ -72,5 +73,5 @@ io.on('connection', socket => {
 });
 
 server.listen(process.env.PORT || 3000, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on https://vc-chat.onrender.com`);
 });
