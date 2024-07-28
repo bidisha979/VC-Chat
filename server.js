@@ -1,4 +1,4 @@
-require('dotenv').config;
+require('dotenv').config();
 
 const express = require("express");
 const app = express();
@@ -14,7 +14,7 @@ const server = http.createServer(app);
 // };
 // const server = https.createServer(options, app);
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -72,6 +72,6 @@ io.on('connection', socket => {
     });
 });
 
-server.listen(process.env.PORT || 3000, () => {
+server.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
