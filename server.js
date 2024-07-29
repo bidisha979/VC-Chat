@@ -23,7 +23,7 @@ const socketio = require('socket.io');
 const io = socketio(server, {
     cors: {
         origin: '*',
-        methods: ['GET', 'POST']
+        // methods: ['GET', 'POST']
     }
 });
 
