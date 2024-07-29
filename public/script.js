@@ -1,4 +1,4 @@
-const socket = io('https://vc-chat.onrender.com');
+const socket = io('/');
 
 const hostVideo = document.createElement('video');
 hostVideo.muted = true;
@@ -9,10 +9,10 @@ while (!user) {
 }
 
 var peer = new Peer({
-    host: 'vc-chat.onrender.com',
-    port: '443',
+    host: '127.0.0.1',
+    port: '3000',
     path: '/peerjs',
-    secure: true
+    // secure: true
 });
 
 const peers = {};
