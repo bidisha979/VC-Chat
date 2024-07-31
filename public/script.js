@@ -9,8 +9,8 @@ while (!user) {
 }
 
 var peer = new Peer({
-    host: '127.0.0.1',
-    port: '3000',
+    host: 'vc-chat.onrender.com',
+    port: '',
     path: '/peerjs',
     // secure: true
 });
